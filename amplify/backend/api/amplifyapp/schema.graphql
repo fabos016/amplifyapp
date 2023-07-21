@@ -1,0 +1,19 @@
+type Event @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String!
+  startTime: AWSDateTime!
+  durationMinutes: Int!
+  isRequired: Boolean!
+  managedBy: String!
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  email: AWSEmail!
+  password: String!
+  firstName: String!
+  lastName: String!
+  isManager: Boolean!
+  enrolledEvents: [String!]
+} 
