@@ -111,8 +111,12 @@ async function signinDisplayChange(){
   //Should have different if statements displaying users functions. example if admin show add event section, dont do that if employee
   let y =document.getElementById("eventsDisplay");
   y.style.display="block";
-  let z =document.getElementById("addEvent");
-  z.style.display="block";
+  
+  if (getInput("lgemail").includes("admin")) {
+    let z =document.getElementById("addEvent");
+    z.style.display="block";    
+  }
+
 }
 
 export default App;
