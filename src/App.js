@@ -112,9 +112,13 @@ async function signinDisplayChange(){
   let y =document.getElementById("eventsDisplay");
   y.style.display="block";
   
+  let z =document.getElementById("addEvent");
+
   if (getInput("lgemail").includes("admin")) {
-    let z =document.getElementById("addEvent");
+    
     z.style.display="block";    
+  }else{
+    z.style.display="none"
   }
 
 }
